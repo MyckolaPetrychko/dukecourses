@@ -46,8 +46,9 @@ public class CommonWords {
     
     public int indexOf(String[] list, String word){
         for (int k = 0; k < list.length; k++){
-            if (list[k].equals(word))
+            if (list[k].equals(word)){
                 return k;
+            }
         }
         return -1;
     }   

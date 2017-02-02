@@ -2,16 +2,22 @@ import edu.duke.*;
 /**
  * Write a description of WordPlay here.
  * 
- * @author (your name) 
+ * @author (pvm) 
  * @version (a version number or a date)
  */
 public class WordPlay {
     
-    
+    /**
+     * Return true if the char ch is vowels
+     * Otherwise return false
+     */
     public Boolean isVowels(char ch){
         return ("aeiou").contains(String.valueOf(ch));
     }
     
+    /**
+     * Replace vowels in phrase to char ch
+     */
     public String replaceVowels(String phrase, char ch){
         StringBuilder sb = new StringBuilder(phrase);
         for (int i = 0; i < phrase.length(); i++){
@@ -22,6 +28,11 @@ public class WordPlay {
         return sb.toString();
     }
     
+    /**
+     * Change character ch in phrase 
+     *  to '*' if the character is in odd position (i + 1) % 2 > 0
+     *  to '+' if the character is in even position (i + 1) % 2 == 0
+     */
     public String emphasize(String phrase, char ch){
         StringBuilder sb = new StringBuilder(phrase);
         for (int i = 0; i < phrase.length(); i++){
